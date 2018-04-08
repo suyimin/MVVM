@@ -5,11 +5,10 @@
 
         <variable
             name="user"
-            type="com.mvvm.model.User"/>
+            type="com.mvvm.model.User" />
     </data>
 
-    <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -21,21 +20,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.realName}"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@{user.mobile}"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(user.age),default=`defaultValue`}"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -49,14 +48,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="With String Format"
                 android:textSize="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
@@ -64,7 +63,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
 
         </LinearLayout>
@@ -74,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{@string/name_format(user.realName)}"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/tv_phone"
@@ -82,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@{@string/mobile_format(user.mobile)}"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
     </LinearLayout>
 </layout>

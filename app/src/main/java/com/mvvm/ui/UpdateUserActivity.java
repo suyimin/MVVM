@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableArrayMap;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.mvvm.R;
@@ -13,9 +12,6 @@ import com.mvvm.databinding.ActivityUpdateUserBinding;
 import com.mvvm.model.User;
 import com.mvvm.model.UserField;
 
-/**
- * Created by chiclaim on 2016/02/18
- */
 public class UpdateUserActivity extends BaseActivity {
     private ActivityUpdateUserBinding binding;
     private User user;
@@ -43,11 +39,13 @@ public class UpdateUserActivity extends BaseActivity {
         binding.setCollection(map);
     }
 
-    //如果(某个)字段发生变化.
-    //1,通过User继承BaseObservable实现
-    //2,通过ObservableField方式实现
-    //3,通过Observable Collections的方式 如:ObservableArrayMap
-    //4,当然可以通过binding.setUser(user) [相当于所有的View重新设置一遍]
+    /**
+     * 如果(某个)字段发生变化.
+     * 1,通过User继承BaseObservable实现
+     * 2,通过ObservableField方式实现
+     * 3,通过Observable Collections的方式 如:ObservableArrayMap
+     * 4,当然可以通过binding.setUser(user) [相当于所有的View重新设置一遍]
+     */
     public void updateNameByPOJP(View view) {
 
         if ("Johnny".equals(user.getRealName())) {
@@ -58,7 +56,7 @@ public class UpdateUserActivity extends BaseActivity {
             user.setMobile("119");
         }
         //当然可以通过binding.setUser(user)
-        binding.setUser(user);
+        //binding.setUser(user);
     }
 
     public void updateNameByField(View view) {

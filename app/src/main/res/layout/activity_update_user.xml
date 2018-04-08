@@ -3,19 +3,19 @@
 
     <data>
 
-        <import type="android.databinding.ObservableMap"/>
+        <import type="android.databinding.ObservableMap" />
 
         <variable
             name="user"
-            type="com.mvvm.model.User"/>
+            type="com.mvvm.model.User" />
 
         <variable
             name="fields"
-            type="com.mvvm.model.UserField"/>
+            type="com.mvvm.model.UserField" />
 
         <variable
             name="collection"
-            type="ObservableMap&lt;String,Object>"/>
+            type="ObservableMap&lt;String,Object>" />
 
     </data>
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="@string/data_binding_observable"
             android:textColor="@android:color/black"
-            android:textSize="12dp"/>
+            android:textSize="12dp" />
 
         <LinearLayout
             android:id="@+id/ll_pojo"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:text="@{user.realName}"
-                android:textSize="14dp"/>
+                android:textSize="14dp" />
 
 
             <TextView
@@ -56,7 +56,7 @@
                 android:background="@null"
                 android:text="@{user.mobile}"
                 android:textSize="14dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:text="@{fields.realName}"
-                android:textSize="14dp"/>
+                android:textSize="14dp" />
 
 
             <TextView
@@ -85,7 +85,7 @@
                 android:background="@null"
                 android:text="@{fields.mobile}"
                 android:textSize="14dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="@{collection[`realName`]}"
-                android:textSize="14dp"/>
+                android:textSize="14dp" />
 
 
             <TextView
@@ -112,7 +112,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="@{collection[`mobile`]}"
                 android:textSize="14dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             android:onClick="updateNameByPOJP"
             android:text="修改(By POJO)"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
 
         <Button
@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:onClick="updateNameByField"
             android:text="修改(By Fields)"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
 
         <Button
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:onClick="updateNameByCollection"
             android:text="修改(By Collection)"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
     </LinearLayout>
 </layout>

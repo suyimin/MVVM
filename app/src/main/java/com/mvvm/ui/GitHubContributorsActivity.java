@@ -27,12 +27,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-
-/**
- * RxJava+Retrofit1.9, Authorization by token  <br/><br/>
- * <B>Created by chiclaim on 2016/02/18</B>
- */
-
 public class GitHubContributorsActivity extends BaseActivity {
 
     private GitHubApi gitHubApi = ApiServiceFactory2.createService(GitHubApi.class);

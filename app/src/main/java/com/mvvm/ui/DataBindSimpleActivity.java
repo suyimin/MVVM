@@ -12,7 +12,6 @@ public class DataBindSimpleActivity extends BaseActivity {
 
     private ActivitySimpleBinding binding;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +48,6 @@ public class DataBindSimpleActivity extends BaseActivity {
                 hideLoadingDialog();
                 User user = new User("Chiclaim", "13512341234");
                 binding.setUser(user);
-                //binding.setVariable(com.mvvm.BR.user, user);
             }
         }.execute();
     }
