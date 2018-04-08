@@ -10,7 +10,7 @@ import com.jakewharton.rxbinding.widget.TextViewTextChangeEvent;
 import com.mvvm.R;
 import com.mvvm.adapter.SearchAdapter;
 import com.mvvm.databinding.SearchDebounceBinding;
-import com.mvvm.http.ApiServiceFactory2;
+import com.mvvm.http.ApiServiceFactory;
 import com.mvvm.http.SearchApi;
 import com.mvvm.utils.DividerItemDecoration;
 import com.mvvm.utils.RecyclerViewUtils;
@@ -29,7 +29,7 @@ import rx.schedulers.Schedulers;
  */
 public class SearchDebounceActivity extends BaseActivity {
 
-    private SearchApi searchApi = ApiServiceFactory2.createService(SearchApi.class);
+    private SearchApi searchApi = ApiServiceFactory.createService(SearchApi.class);
 
     private SearchAdapter adapter;
 

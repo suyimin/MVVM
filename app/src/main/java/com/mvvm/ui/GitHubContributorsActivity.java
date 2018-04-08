@@ -10,7 +10,7 @@ import com.mvvm.R;
 import com.mvvm.adapter.BaseAdapter;
 import com.mvvm.adapter.ContributorAdapter;
 import com.mvvm.exception.AccessDenyException;
-import com.mvvm.http.ApiServiceFactory2;
+import com.mvvm.http.ApiServiceFactory;
 import com.mvvm.http.GitHubApi;
 import com.mvvm.http.NetErrorType;
 import com.mvvm.model.AuthToken;
@@ -29,16 +29,13 @@ import rx.schedulers.Schedulers;
 
 public class GitHubContributorsActivity extends BaseActivity {
 
-    private GitHubApi gitHubApi = ApiServiceFactory2.createService(GitHubApi.class);
+    private GitHubApi gitHubApi = ApiServiceFactory.createService(GitHubApi.class);
 
     public RecyclerView rvContent;
     public TextView tvTip;
     public BaseAdapter<Contributor> adapter;
-    private boolean loading;
-
 
     private RecyclerView.OnScrollListener scrollListener;
-
 
     public static void launch(Context context) {
         Intent intent = new Intent(context, GitHubContributorsActivity.class);
@@ -70,20 +67,6 @@ public class GitHubContributorsActivity extends BaseActivity {
                 //check for scroll down
                 if (adapter.getModelSize() == 0) {
                     return;
-                }
-                if (dy > 0) {
-//                    LinearLayoutManager mLayoutManager = (LinearLayoutManager)
-//                            rvContent.getLayoutManager();
-//                    int visibleItemCount = mLayoutManager.getChildCount();
-//                    int totalItemCount = mLayoutManager.getItemCount();
-//                    int pastVisibleItems = mLayoutManager.findFirstVisibleItemPosition();
-//                    if (!isLast && !loading) {
-//                        if ((visibleItemCount + pastVisibleItems) >= totalItemCount) {
-//                            loading = true;
-//                            adapter.showFooter();
-//                            requestContributes();
-//                        }
-//                    }
                 }
             }
         };
@@ -147,7 +130,7 @@ public class GitHubContributorsActivity extends BaseActivity {
                     public void onError(Throwable t) {
                         hideLoadingDialog();
                         t.printStackTrace();
-                        loading = false;
+
                         tvTip.setText(t.getClass().getName() + "\n" + t.getMessage());
 
                         NetErrorType.ErrorType error = NetErrorType.getErrorType(t);
@@ -155,6 +138,7 @@ public class GitHubContributorsActivity extends BaseActivity {
                         tvTip.append(error.msg);
                     }
 
+                    @Override
                     public void onNext(List<Contributor> response) {
                         adapter.appendItems(response);
                     }
