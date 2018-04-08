@@ -5,7 +5,7 @@
 
 
 
-# Awesome-Android-MVVM
+# MVVM
 - 什么是MVVM, 为什么需要 MVVM？
 - 如何在android中使用DataBinding实现MVVM架构？
 

@@ -12,9 +12,6 @@ import com.mvvm.databinding.ActivityElBinding;
 import com.mvvm.event.UserFollowEvent;
 import com.mvvm.model.User;
 
-/**
- * Created by chiclaim on 2016/02/19
- */
 public class ELActivity extends BaseActivity implements UserFollowEvent{
 
     //Null Coalescing Operator
