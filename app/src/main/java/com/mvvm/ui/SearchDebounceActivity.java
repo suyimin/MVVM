@@ -44,7 +44,7 @@ public class SearchDebounceActivity extends BaseActivity {
                 R.dimen.list_divider_height, R.color.divider_color));
 
         //===========================
-        //1,避免EditText没改变一次就请求一次.
+        //1,避免EditText每改变一次就请求一次.
         //2,避免频繁的请求,多个导致结果顺序错乱,最终的结果也就有问题.
 
         // 但是对于第二个问题,也不能彻底的解决. 比如停止输入400毫秒后,
