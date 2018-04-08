@@ -9,11 +9,7 @@ import com.mvvm.BR;
 import com.mvvm.R;
 import com.mvvm.databinding.ItemSearchBinding;
 
-/**
- * Created by chiclaim on 2016/02/26
- */
 public class SearchAdapter extends BaseAdapter<String> {
-
 
     public SearchAdapter(Context context) {
         super(context);
@@ -21,7 +17,8 @@ public class SearchAdapter extends BaseAdapter<String> {
 
     @Override
     public RecyclerView.ViewHolder onMyCreateViewHolder(ViewGroup parent, int viewType) {
-        ItemSearchBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_search, parent, false);
+        ItemSearchBinding binding = DataBindingUtil.inflate(inflater,
+                R.layout.item_search, parent, false);
         return new ItemViewHolder(binding);
     }
 
@@ -37,7 +34,6 @@ public class SearchAdapter extends BaseAdapter<String> {
     public int getMyItemViewType(int position) {
         return 0;
     }
-
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
 

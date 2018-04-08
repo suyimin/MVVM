@@ -17,14 +17,8 @@ import com.mvvm.databinding.CustomSetterBinding;
 import com.mvvm.model.User;
 import com.squareup.picasso.Picasso;
 
-/**
- *
- *
- * Created by chiclaim on 2016/02/23
- */
 public class CustomSetterActivity extends BaseActivity {
 
-    //private User user;
     private CustomSetterBinding binding;
     private String errorAvatar = "http error";
     private String avatar1 = "https://avatars.githubusercontent.com/u/133019?v=3";

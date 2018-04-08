@@ -5,39 +5,39 @@
 
     <data>
 
-        <import type="android.util.SparseArray"/>
+        <import type="android.util.SparseArray" />
 
-        <import type="java.util.Map"/>
+        <import type="java.util.Map" />
 
-        <import type="java.util.List"/>
+        <import type="java.util.List" />
 
         <variable
             name="book1"
-            type="com.mvvm.model.Book"/>
+            type="com.mvvm.model.Book" />
 
         <variable
             name="list"
-            type="List"/>
+            type="List" />
 
         <variable
             name="map"
-            type="Map"/>
+            type="Map" />
 
         <variable
             name="sparse"
-            type="SparseArray&lt;String>"/>
+            type="SparseArray&lt;String>" />
 
         <variable
             name="user"
-            type="com.mvvm.model.User"/>
+            type="com.mvvm.model.User" />
 
         <variable
             name="index"
-            type="int"/>
+            type="int" />
 
         <variable
             name="event"
-            type="com.mvvm.event.UserFollowEvent"/>
+            type="com.mvvm.event.UserFollowEvent" />
 
     </data>
 
@@ -46,7 +46,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +58,7 @@
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@{user.userName ?? user.realName}"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +67,7 @@
                 android:onClick="coalescingSample"
                 android:padding="5dp"
                 android:text="Null Coalescing Operator"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,7 +82,7 @@
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@{sparse[index]}"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +91,7 @@
                 android:onClick="collectionSample"
                 android:padding="5dp"
                 android:text="Get From Collection"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
         </LinearLayout>
 
 
@@ -110,7 +109,7 @@
                 android:drawableLeft="@{user.isFollow ? @drawable/ic_like_yellowfull : @drawable/ic_like_yellow}"
                 android:drawablePadding="5dp"
                 android:text="@{user.isFollow ? `已关注` : `未关注`}"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,7 +120,7 @@
                 android:onClick="@{user.isFollow ? event.unFollow : event.follow}"
                 android:padding="5dp"
                 android:text="@{user.isFollow ? `UnFollow User` : `Follow User`}"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
         </RelativeLayout>
 

@@ -24,9 +24,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
-/**
- * Created by chiclaim on 2016/02/26
- */
 public class SearchDebounceActivity extends BaseActivity {
 
     private SearchApi searchApi = ApiServiceFactory.createService(SearchApi.class);
@@ -46,7 +43,7 @@ public class SearchDebounceActivity extends BaseActivity {
         binding.recyclerView.addItemDecoration(DividerItemDecoration.newVertical(this,
                 R.dimen.list_divider_height, R.color.divider_color));
 
-        //===========================@TODO
+        //===========================
         //1,避免EditText没改变一次就请求一次.
         //2,避免频繁的请求,多个导致结果顺序错乱,最终的结果也就有问题.
 
@@ -54,7 +51,7 @@ public class SearchDebounceActivity extends BaseActivity {
         // 那么肯定会开始请求Search接口, 但是用户又会输入新的关键字,
         // 这个时候上个请求还没有返回, 新的请求又去请求Search接口.
         // 这个时候有可能最后的一个请求返回, 第一个请求最后返回,导致搜索结果不是想要的.
-        //===========================@TODO
+        //===========================
 
         subscription = RxTextView.textChangeEvents(binding.inputSearch)
                 .debounce(400, TimeUnit.MILLISECONDS)

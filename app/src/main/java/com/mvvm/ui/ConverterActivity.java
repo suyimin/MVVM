@@ -9,13 +9,9 @@ import android.view.View;
 
 import com.mvvm.R;
 import com.mvvm.databinding.ConverterBinding;
-import com.mvvm.databinding.CustomSetterBinding;
 import com.mvvm.event.UserFollowEvent;
 import com.mvvm.model.User;
 
-/**
- * Created by chiclaim on 2016/02/23
- */
 public class ConverterActivity extends BaseActivity implements UserFollowEvent {
 
     private User user;

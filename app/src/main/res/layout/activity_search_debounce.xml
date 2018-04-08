@@ -4,7 +4,7 @@
 
     <data class="SearchDebounceBinding">
 
-        <import type="java.util.List"/>
+        <import type="java.util.List" />
 
     </data>
 
@@ -20,12 +20,12 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="请输入关键字"
-            android:padding="10dp"/>
+            android:padding="10dp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 </layout>

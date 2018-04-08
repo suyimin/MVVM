@@ -12,12 +12,7 @@ import com.mvvm.databinding.ActivityElBinding;
 import com.mvvm.event.UserFollowEvent;
 import com.mvvm.model.User;
 
-public class ELActivity extends BaseActivity implements UserFollowEvent{
-
-    //Null Coalescing Operator
-    //Collections
-    //String Literals
-    //Resources
+public class ELActivity extends BaseActivity implements UserFollowEvent {
 
     ActivityElBinding binding;
 
@@ -51,7 +46,6 @@ public class ELActivity extends BaseActivity implements UserFollowEvent{
 
         binding.setEvent(this);
     }
-
 
     public void collectionSample(View view) {
         if (index >= sparseArray.size() - 1) {
